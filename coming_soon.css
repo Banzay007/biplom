@@ -11,5 +11,10 @@
 
 }
 
+@media (max-width:990px) {
+	.main_picture {
+		background-size: 100%;
+	}
+}
 
 

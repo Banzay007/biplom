@@ -1,89 +1,82 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
-
+	<!-- для адаптации -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="stylesheet" href="style.css">
 
 	<link rel="icon" href="img/favicon.ico">
 	<meta name="description" content="photographer фотограф">
-	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+	<!-- подключаем стили -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- подключаем шрифт -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/0fa76d59ad.js" crossorigin="anonymous"></script>
+
+	<!-- подключаем шрифт иконок -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 	<title>Фотограф</title>
 </head>
 
 
+
 <body>
-	<!-- <noscript>You need to enable JavaScript to run this app</noscript> -->
-
-
-
-
-	<!-- Кнопка прокрутки -->
-	<!-- <div id="upbutton"></div> -->
-	<a id="upbutton" href="#" onclick="smoothJumpUp(); return false;">
-		<img src="img/arrow3.svg" alt="Top" title="Наверх">
-	</a>
-
-
-
-
-
-	<!-- Header -->
-	<header class="header">
+	<!------------Header----------->
+	<header class="header" id="header">
 		<div class="container">
+
 			<div class="header__inner">
+
 				<div class="header__logo">
 					<div class="header__name">Павел Парамонов</div>
 					<div class="header__photo">фотограф</div>
 				</div>
 
 				<!-- Nav -->
-				<nav class="nav">
-					<a class="nav__link" href="#about">О себе</a>
-					<a class="nav__link" href="#portfolio">Портфолио</a>
-					<a class="nav__link" href="#news">Новости</a>
+				<nav class="nav" id="nav">
+					<a class="nav__link" href="#about" data-scroll="#about">О себе</a>
+					<a class="nav__link" href="#portfolio" data-scroll="#portfolio">Портфолио</a>
+					<a class="nav__link" href="#news" data-scroll="#news">Новости</a>
 					<a class="nav__link" href="coming_soon.html">Студия</a>
 					<a class="nav__link" href="coming_soon.html">Уроки мастерства</a>
-					<a class="nav__link" href="#cont">Контакты</a>
+					<a class="nav__link" href="#cont" data-scroll="#cont">Контакты</a>
 
 				</nav><!-- Nav -->
+
+				<!-- Burger -->
+				<button class="nav-toggle" id="nav_toggle" type="button">
+					<span class="nav-toggle__item">Меню</span>
+				</button>
+
 			</div>
+
 		</div>
 	</header> <!-- Header -->
 
 
 
-	<!-- Intro -->
+
+	<!------------Intro----------->
 	<div class="intro" id="bg">
-		<div class="container">
-			<!-- <div class="intro__inner">
-				<h1 class="intro__title">Заголовок</h1>
-				<p class="intro__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem tenetur veritatis
-					mollitia consequuntur ut! Nostrum ratione odio est, rerum saepe sapiente quaerat, molestias aliquam
-					recusandae non eius voluptas ut assumenda?</p>
+	</div>
 
-				<a class="btn" href="#">Learn more</a>
-			</div> -->
-		</div>
-	</div> <!-- Intro -->
+
+	<!------------Кнопка возврата вверх----------->
+	<div>
+		<a id="upbutton" href="#" onclick="smoothJumpUp(); return false;">
+			<img src="img/arrow3.svg" alt="Top" title="Наверх">
+		</a>
+	</div>
 
 
 
 
-
-
-
-
-
-	<!-- Portfolio -->
+	<!------------Portfolio----------->
 	<section class="section" id="portfolio">
 		<div class="container">
 
@@ -91,180 +84,159 @@
 				<h3 class="section__subtitle">Портфолио</h3>
 			</div>
 
-			<div class="portfolio">
 
-				<div class="portfolio__item">
-					<div class="porfolio__img">
-						<a href="coming_soon.html">
+			<div class="card">
+				<div class="card__item">
+					<div class="card__inner">
+						<div class="card__img">
 							<img src="img/portfolio/1.jpg" alt="">
-							<div class="portfolio__text">
-								реклама
-							</div>
-						</a>
+						</div>
+						<div class="card__text">Реклама</div>
 					</div>
 				</div>
 
-				<div class="portfolio__item">
-					<div class="porfolio__img">
-						<a href="coming_soon.html">
+				<div class="card__item">
+					<div class="card__inner">
+						<div class="card__img">
 							<img src="img/portfolio/2.jpg" alt="">
-							<div class="portfolio__text">
-								мода
-							</div>
-						</a>
+						</div>
+						<div class="card__text">Мода</div>
 					</div>
 				</div>
 
-				<div class="portfolio__item">
-					<div class="porfolio__img">
-						<a href="coming_soon.html">
+				<div class="card__item">
+					<div class="card__inner">
+						<div class="card__img">
 							<img src="img/portfolio/3.jpg" alt="">
-							<div class="portfolio__text">
-								портрет
-							</div>
-						</a>
+						</div>
+						<div class="card__text">Портрет</div>
 					</div>
 				</div>
 
-				<div class="portfolio__item">
-					<div class="porfolio__img">
-						<a href="coming_soon.html">
+				<div class="card__item">
+					<div class="card__inner">
+						<div class="card__img">
 							<img src="img/portfolio/4.jpg" alt="">
-							<div class="portfolio__text">
-								дети и семья
-							</div>
-						</a>
+						</div>
+						<div class="card__text">Дети и семья</div>
 					</div>
 				</div>
 
-				<div class="portfolio__item">
-					<div class="porfolio__img">
-						<a href="coming_soon.html">
+				<div class="card__item">
+					<div class="card__inner">
+						<div class="card__img">
 							<img src="img/portfolio/5.jpg" alt="">
-							<div class="portfolio__text">
-								еда
-							</div>
-						</a>
+						</div>
+						<div class="card__text">Еда</div>
 					</div>
 				</div>
 
-				<div class="portfolio__item">
-					<div class="porfolio__img">
-						<a href="coming_soon.html">
+				<div class="card__item">
+					<div class="card__inner">
+						<div class="card__img">
 							<img src="img/portfolio/6.jpg" alt="">
-							<div class="portfolio__text">
-								постеры и обложки
-							</div>
-						</a>
+						</div>
+						<div class="card__text">Постеры и обложки</div>
 					</div>
 				</div>
 
-				<div class="portfolio__item">
-					<div class="porfolio__img">
-						<a href="coming_soon.html">
+				<div class="card__item">
+					<div class="card__inner">
+						<div class="card__img">
 							<img src="img/portfolio/7.jpg" alt="">
-							<div class="portfolio__text">
-								город
-							</div>
-						</a>
+						</div>
+						<div class="card__text">Город</div>
 					</div>
 				</div>
 
-				<div class="portfolio__item">
-					<div class="porfolio__img">
-						<a href="coming_soon.html">
+				<div class="card__item">
+					<div class="card__inner">
+						<div class="card__img">
 							<img src="img/portfolio/8.jpg" alt="">
-							<div class="portfolio__text">
-								свадьба
-							</div>
-						</a>
+						</div>
+						<div class="card__text">Свадьба</div>
 					</div>
 				</div>
 
-				<div class="portfolio__item">
-					<div class="porfolio__img">
-						<a href="coming_soon.html">
+				<div class="card__item">
+					<div class="card__inner">
+						<div class="card__img">
 							<img src="img/portfolio/9.jpg" alt="">
-							<div class="portfolio__text">
-								животные
-							</div>
-						</a>
+						</div>
+						<div class="card__text">Животные</div>
 					</div>
 				</div>
 
-				<div class="portfolio__item">
-					<div class="porfolio__img">
-						<a href="coming_soon.html">
+				<div class="card__item">
+					<div class="card__inner">
+						<div class="card__img">
 							<img src="img/portfolio/10.jpg" alt="">
-							<div class="portfolio__text">
-								природа
-							</div>
-						</a>
+						</div>
+						<div class="card__text">Природа</div>
 					</div>
 				</div>
 
-				<div class="portfolio__item">
-					<div class="porfolio__img">
-						<a href="coming_soon.html">
+				<div class="card__item">
+					<div class="card__inner">
+						<div class="card__img">
 							<img src="img/portfolio/11.jpg" alt="">
-							<div class="portfolio__text">
-								без ретуши
-							</div>
-						</a>
+						</div>
+						<div class="card__text">Без ретуши</div>
 					</div>
 				</div>
 
-				<div class="portfolio__item">
-					<div class="porfolio__img">
-						<a href="coming_soon.html">
+				<div class="card__item">
+					<div class="card__inner">
+						<div class="card__img">
 							<img src="img/portfolio/12.jpg" alt="">
-							<div class="portfolio__text">
-								церкви
-							</div>
-						</a>
+						</div>
+						<div class="card__text">Церкви</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section><!-- Portfolio -->
+	</section>
 
 
 
-	<!-- About -->
-	<div class="about" id="about">
+
+	<!------------About----------->
+	<section class="section__about" id="about">
+
 		<div class="container">
-
 			<div class="about__inner">
 				<h3 class="about__title">о себе</h3>
-				<p class="about__text">Профессионально занимается фотографией с 1996 года. Основные направления
-					деятельности: съемка портфолио, художественного портрета, fashion, food-фотография, съемка для
-					рекламы и каталогов. </p>
-				<p class="about__text">Лауреат премии имени Валентина Пикуля, обладатель золотой медали за циклы
-					фоторабот, воспевающие красоту родной земли и её людей (2007г). Победитель IV международного
-					фотоконкурса "Лучший фотограф года" (2012г.). Победитель многих национальных и международных
-					фотоконкурсов (более подробно здесь).</p>
-
+				<div class="about__text">
+					<p>Профессионально занимается фотографией с 1996 года. Основные направления
+						деятельности: съемка портфолио, художественного портрета, fashion, food-фотография, съемка для
+						рекламы и каталогов. </p>
+					<p>Лауреат премии имени Валентина Пикуля, обладатель золотой медали за циклы фоторабот, воспевающие
+						красоту родной земли и её людей (2007г). Победитель IV международного
+						фотоконкурса "Лучший фотограф года" (2012г.). Победитель многих национальных и международных
+						фотоконкурсов (более подробно здесь).</p>
+				</div>
 				<a class="btn" href="coming_soon.html">подробнее</a>
 			</div>
 		</div>
-	</div><!-- About -->
+	</section><!-- About -->
 
 
-
-
-	<!-- News -->
-	<section class="section section_news" id="news">
+	<!------------News----------->
+	<section class="section" id="news">
 		<div class="container">
 
 			<div class="section__header">
 				<h3 class="section__subtitle">Новости</h3>
 			</div>
 
-			<div class="news__inner">
+			<div class="news">
 
 				<div class="news__item">
-					<a href="coming_soon.html" class="news__title">Победитель проекта «Best of Russia 2015»</a>
-
+					<div class="news__title">
+						<a href="coming_soon.html">
+							Победитель проекта «Best of Russia 2015»
+						</a>
+					</div>
 					<div class="news__text">
 						Определены победители проекта «Лучшие фотографии России-2015». Из более чем 22000 фотографий со
 						всей России, 294 стали победителями. Фотографии победителей проекта будут представлены на
@@ -275,8 +247,11 @@
 				</div>
 
 				<div class="news__item">
-					<a href="coming_soon.html" class="news__title">20 гениальных фотографий из России</a>
-
+					<div class="news__title">
+						<a href="coming_soon.html">
+							20 гениальных фотографий из России
+						</a>
+					</div>
 					<div class="news__text">
 						Прошел Всероссийский фотоконкурс Best of Russia 2015. Фотографии проходили строгий конкурсный
 						отбор по 5 номинациям: «Люди. События.
@@ -287,9 +262,12 @@
 				</div>
 
 				<div class="news__item">
-					<a href="coming_soon.html" class="news__title">Победитель престижной фотопремии "Лучший фотограф
-						года"</a>
-
+					<div class="news__title">
+						<a href="coming_soon.html">
+							Победитель престижной фотопремии "Лучший фотограф
+							года"
+						</a>
+					</div>
 					<div class="news__text">
 						15 мая 2012 года в центре искусств на столичном "Красном Октябре" состоялась церемония
 						награждения победителей IV открытой международной фотопремии "Лучший фотограф года" в нескольких
@@ -300,8 +278,11 @@
 				</div>
 
 				<div class="news__item">
-					<a href="coming_soon.html" class="news__title">Объявлены победители фотоконкурса IPA Россия</a>
-
+					<div class="news__title">
+						<a href="coming_soon.html">
+							Объявлены победители фотоконкурса IPA Россия
+						</a>
+					</div>
 					<div class="news__text">
 						Международный ежегодный фотоконкурс International Photography Awards проходит в десятый раз.
 						Павел Парамонов стал одним из победителей и получил Бронзу (Bronze) в категории Реклама /
@@ -311,26 +292,12 @@
 				</div>
 			</div>
 		</div>
-	</section><!-- News -->
+
+	</section>
 
 
 
-
-	<!-- process -->
-	<!-- <div class="process">
-		<div class="container">
-
-			<div class="section__header">
-				<h3 class="section__subtitle">в процессе работы</h3>
-			</div>
-		</div>
-	</div> -->
-	<!-- process -->
-
-
-
-
-	<!-- backstage -->
+	<!------------backstage----------->
 	<section class="section">
 		<div class="container">
 
@@ -338,54 +305,46 @@
 				<h3 class="section__subtitle">Бэкстейдж</h3>
 			</div>
 
-			<div class="backstage__inner">
-
+			<div class="backstage">
 				<div class="backstage__item">
-					<iframe width="626" height="353" src="https://www.youtube.com/embed/7T4zibdkwTg"
-						title="YouTube video player" frameborder="0"
+					<iframe src="https://www.youtube.com/embed/7T4zibdkwTg" title="YouTube video player" frameborder="0"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 	picture-in-picture"
 						allowfullscreen></iframe>
 				</div>
 
 				<div class="backstage__item">
-					<iframe width="626" height="353" src="https://www.youtube.com/embed/-UeZhj5Iyaw"
-						title="YouTube video player" frameborder="0"
+					<iframe src="https://www.youtube.com/embed/-UeZhj5Iyaw" title="YouTube video player" frameborder="0"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 						allowfullscreen></iframe>
 				</div>
 
 				<div class="backstage__item">
-					<iframe width="626" height="353" src="https://www.youtube.com/embed/VPP4nWWxsAA"
-						title="YouTube video player" frameborder="0"
+					<iframe src="https://www.youtube.com/embed/VPP4nWWxsAA" title="YouTube video player" frameborder="0"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 						allowfullscreen></iframe>
 				</div>
 
 				<div class="backstage__item">
-					<iframe width="626" height="353" src="https://www.youtube.com/embed/KqXmsU7wPqs"
-						title="YouTube video player" frameborder="0"
+					<iframe src="https://www.youtube.com/embed/KqXmsU7wPqs" title="YouTube video player" frameborder="0"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 						allowfullscreen></iframe>
 				</div>
-
 			</div>
 		</div>
-	</section><!-- backstage -->
+	</section>
 
 
 
-
-
-
-	<!-- clients -->
-	<section class="section section_client">
+	<!------------clients----------->
+	<section class="section clients">
 		<div class="container">
 
 			<div class="section__header">
-				<h3 class="section__subtitle">клиенты</h3>
+				<h3 class="section__subtitle">Клиенты</h3>
 			</div>
 
-			<div class="clients__inner">
+			<div class="section__clients">
+
 				<div class="clients_inner__1">
 					<img src="img/clients/MH.svg" alt="">
 					<img src="img/clients/DS.svg" alt="">
@@ -428,47 +387,53 @@
 				</div>
 
 			</div>
+
 		</div>
-	</section><!-- clients -->
+	</section>
 
 
 
-
-	<!-- Footer -->
-	<footer class="section">
+	<!------------Footer----------->
+	<footer class="footer" id="cont">
 		<div class="container">
 
 			<div class="footer__inner">
 
-				<div class="footer__link" id="cont">
-					<a href="https://www.instagram.com/pavelparamonov_foto/" target="_blank">
-						<img src="img/footer/insta.svg" alt="instagram">
-					</a>
-					<a href="https://www.facebook.com/ParamonovPavel" target="_blank">
-						<img src="img/footer/fb.svg" alt="facebook">
-					</a>
-					<a href="https://vk.com/pavelparamonov" target="_blank">
-						<img src="img/footer/vk.svg" alt="vk">
-					</a>
-					<a href="https://www.youtube.com/channel/UCVokcRVwx6dDDc5XaIksvyw" target="_blank">
-						<img src="img/footer/youtube.svg" alt="youtube">
-					</a>
+				<div class="footer__social">
+
+					<div class="footer__social-content">
+						<a href="https://www.facebook.com/ParamonovPavel" target="_blank">
+							<i class="fab fa-facebook"></i>
+						</a>
+						<a href="https://vk.com/pavelparamonov" target="_blank">
+							<i class="fab fa-vk"></i>
+						</a>
+						<a href="https://www.instagram.com/pavelparamonov_foto/" target="_blank">
+							<i class="fab fa-instagram"></i>
+						</a>
+						<a href="https://www.youtube.com/channel/UCVokcRVwx6dDDc5XaIksvyw" target="_blank">
+							<i class="fab fa-youtube"></i>
+						</a>
+
+					</div>
+
+					<div class="footer__adress">
+						<a class="tel" href="tel:+79637119430">+7 (963) 711 94 30</a>
+						<p>pavelfoto@bk.ru <br>
+							Россия, Москва, Лиственничная аллея, 12/2</p>
+					</div>
+
 				</div>
 
-				<div class="footer__adress">
-					<a href="tel:+79637119430">+7 (963) 711 94 30</a>
-					<p>pavelfoto@bk.ru <br>
-						Россия, Москва, Лиственничная аллея, 12/2</p>
-				</div>
-
-				<div class="footer__co">
-					<p>Copyright © 2021 Pavel Paramonov</p>
+				<div class="copyright">
+					Copyright © 2021 Pavel Paramonov
 				</div>
 
 			</div>
 		</div>
-	</footer> <!-- Footer -->
+	</footer><!-- Footer -->
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 	<script src="script.js"></script>
 </body>
